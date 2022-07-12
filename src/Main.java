@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 class BinaryTree
 {
     int value;
@@ -19,7 +21,7 @@ class BinaryTree
         this(new BinaryTree(left),new BinaryTree(right));
     }
 
-    private static void swapLeftRight(BinaryTree tree)
+    private static void swapLeftRight(@NotNull BinaryTree tree)
     {
         BinaryTree temp=tree.left;
         tree.left=tree.right;
