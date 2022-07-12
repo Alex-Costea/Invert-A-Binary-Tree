@@ -14,6 +14,11 @@ class BinaryTree
         this.right=right;
     }
 
+    BinaryTree(int left,int right)
+    {
+        this(new BinaryTree(left),new BinaryTree(right));
+    }
+
     private static void swapLeftRight(BinaryTree tree)
     {
         BinaryTree temp=tree.left;
@@ -38,7 +43,7 @@ class BinaryTree
 
 public class Main {
     public static void main(String[] args) {
-        BinaryTree myTree= new BinaryTree(new BinaryTree(new BinaryTree(1),new BinaryTree(2)),new BinaryTree(3));
+        BinaryTree myTree= new BinaryTree(new BinaryTree(1,2),new BinaryTree(3));
         System.out.println(myTree);
         BinaryTree.invert(myTree);
         System.out.println(myTree);
