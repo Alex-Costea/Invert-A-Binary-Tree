@@ -1,8 +1,8 @@
 class BinaryTree
 {
     int value;
-    BinaryTree left=null;
-    BinaryTree right=null;
+    BinaryTree left;
+    BinaryTree right;
     BinaryTree(int value)
     {
         this.value=value;
