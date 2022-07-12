@@ -14,7 +14,7 @@ class BinaryTree
         this.right=right;
     }
 
-    private static void swap(BinaryTree tree)
+    private static void swapLeftRight(BinaryTree tree)
     {
         BinaryTree temp=tree.left;
         tree.left=tree.right;
@@ -24,7 +24,7 @@ class BinaryTree
     static void invert(BinaryTree tree)
     {
         if(tree==null) return;
-        swap(tree);
+        swapLeftRight(tree);
         invert(tree.left);
         invert(tree.right);
     }
